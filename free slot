@@ -1,0 +1,155 @@
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DuxiiT/auto-strat/refs/heads/main/Library.lua"))()
+
+TDS:Loadout("Cowboy", "Commander", "Tesla", "Ranger", "Turret")
+TDS:Mode("Trial")
+TDS:GameInfo("Dusty Bridges", {})
+
+TDS:Place("Cowboy", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(1)
+
+TDS:Place("Cowboy", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(2)
+
+TDS:Place("Cowboy", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(3)
+
+TDS:Place("Cowboy", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(4)
+
+TDS:Place("Cowboy", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(5)
+
+TDS:Place("Cowboy", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(6)
+
+TDS:Upgrade(1)
+TDS:Upgrade(2)
+TDS:Upgrade(3)
+TDS:Upgrade(4)
+TDS:Upgrade(5)
+TDS:Upgrade(6)
+
+TDS:Place("Tesla", 22.70818328857422, 27.29611587524414, -155.49066162109375, true)
+TDS:Upgrade(7)
+
+TDS:Place("Tesla", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(8)
+
+TDS:Place("Commander", 51.25840759277344, 29.356903076171875, -152.81405639648438, true)
+TDS:Upgrade(9)
+TDS:Upgrade(9)
+
+TDS:Place("Commander", 51.25840759277344, 29.356903076171875, -152.81405639648438, true)
+TDS:Upgrade(10)
+TDS:Upgrade(10)
+
+TDS:Place("Commander", 51.25840759277344, 29.356903076171875, -152.81405639648438, true)
+TDS:Upgrade(11)
+TDS:Upgrade(11)
+
+TDS:Upgrade(7)
+TDS:Upgrade(8)
+
+TDS:Upgrade(1)
+TDS:Upgrade(1)
+TDS:Upgrade(2)
+TDS:Upgrade(2)
+TDS:Upgrade(3)
+TDS:Upgrade(3)
+TDS:Upgrade(4)
+TDS:Upgrade(4)
+TDS:Upgrade(5)
+TDS:Upgrade(5)
+TDS:Upgrade(6)
+TDS:Upgrade(6)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(12)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(13)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(14)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(15)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(16)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(17)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(18)
+
+TDS:Place("Ranger", 59.52532196044922, 31.980634689331055, -146.0085906982422, true)
+TDS:Upgrade(19)
+
+TDS:Upgrade(12)
+TDS:Upgrade(13)
+TDS:Upgrade(14)
+TDS:Upgrade(15)
+TDS:Upgrade(16)
+TDS:Upgrade(17)
+TDS:Upgrade(18)
+TDS:Upgrade(19)
+
+TDS:Place("Turret", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(20)
+TDS:Upgrade(20)
+TDS:Upgrade(20)
+
+TDS:Place("Turret", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(21)
+TDS:Upgrade(21)
+TDS:Upgrade(21)
+
+TDS:Place("Turret", 40.928348541259766, 28.99773597717285, -160.41537475585938, true)
+TDS:Upgrade(22)
+TDS:Upgrade(22)
+TDS:Upgrade(22)
+
+TDS:Upgrade(1)
+TDS:Upgrade(2)
+TDS:Upgrade(3)
+TDS:Upgrade(4)
+TDS:Upgrade(5)
+TDS:Upgrade(6)
+
+TDS:Upgrade(8)
+TDS:Upgrade(7)
+TDS:Upgrade(8)
+TDS:Upgrade(7)
+
+TDS:Upgrade(12)
+TDS:Upgrade(13)
+TDS:Upgrade(14)
+TDS:Upgrade(15)
+TDS:Upgrade(16)
+TDS:Upgrade(17)
+TDS:Upgrade(18)
+TDS:Upgrade(19)
+TDS:Upgrade(12)
+TDS:Upgrade(13)
+TDS:Upgrade(14)
+TDS:Upgrade(15)
+TDS:Upgrade(16)
+TDS:Upgrade(17)
+TDS:Upgrade(18)
+TDS:Upgrade(19)
+
+TDS:Upgrade(9)
+TDS:Upgrade(9)
+TDS:Upgrade(10)
+TDS:Upgrade(10)
+TDS:Upgrade(11)
+TDS:Upgrade(11)
+
+TDS:Upgrade(20)
+TDS:Upgrade(20)
+TDS:Upgrade(21)
+TDS:Upgrade(21)
+TDS:Upgrade(22)
+TDS:Upgrade(22)
