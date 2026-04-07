@@ -1,0 +1,84 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local StableCameraProximity = {}
+StableCameraProximity.__index = StableCameraProximity
+
+function StableCameraProximity.new(maxDistance)
+	local self = setmetatable({}, StableCameraProximity)
+	
+	self.Player = game.Players.LocalPlayer
+	self.MaxDistance = maxDistance or 50 
+	self.currentMag = 0
+	self.LastMag = 0
+	self.LastTestedNearby = 0
+	
+	local playerScripts = self.Player:WaitForChild("PlayerScripts", 5)
+	if playerScripts then
+		local cameraSet = playerScripts:FindFirstChild("Camera") and playerScripts.Camera:FindFirstChild("Set")
+		if cameraSet then
+			cameraSet:Invoke("CFrameOffset", "Shake", CFrame.new())
+		else
+			warn("Camera.Set not found in PlayerScripts")
+		end
+	else
+		warn("PlayerScripts not found for LocalPlayer")
+	end
+	
+	game:GetService("RunService").RenderStepped:Connect(function(deltaTime)
+		self:Update(deltaTime)
+	end)
+	
+	return self
+end
+
+function StableCameraProximity:Update(deltaTime)
+	if self.Player.Character and self.Player.Character:GetAttribute("VR") ~= true then
+		if tick() - (self.LastTestedNearby or 0) >= 0.15 then
+			local maxMag = 0
+			if self.Player.Character.Humanoid and self.Player.Character.Humanoid.Health > 0 then
+				for _, nextbot in pairs(workspace.Game.Players:GetChildren()) do
+					if nextbot.PrimaryPart and
+						nextbot.Name ~= "Mimic" and
+						nextbot.Name ~= "Rebel" and
+						nextbot.Name ~= "Decoy" and
+						nextbot:GetAttribute("Team") == "Nextbot" and
+						nextbot:GetAttribute("Team") ~= self.Player.Character:GetAttribute("Team") and
+						nextbot:GetAttribute("ShakeEffect") ~= false then
+						local distance = (self.Player.Character.PrimaryPart.Position - nextbot.PrimaryPart.Position).Magnitude
+						local magnitude = 1 - math.clamp(distance, 0, self.MaxDistance) / self.MaxDistance
+						maxMag = math.max(maxMag, magnitude)
+					end
+				end
+			end
+			self.LastMag = maxMag
+			self.LastTestedNearby = tick()
+		end
+		
+			local function lerp(a, b, t)
+			return a + (b - a) * t
+		end
+		self.currentMag = lerp(self.currentMag, self.LastMag, math.min(deltaTime * 30, 1))
+		
+		local playerScripts = self.Player:WaitForChild("PlayerScripts", 5)
+		if playerScripts then
+			local cameraSet = playerScripts:FindFirstChild("Camera") and playerScripts.Camera:FindFirstChild("Set")
+			if cameraSet then
+				cameraSet:Invoke("CFrameOffset", "Shake", CFrame.new())
+			else
+				warn("Camera.Set not found in PlayerScripts during Update")
+			end
+		else
+			warn("PlayerScripts not found for LocalPlayer during Update")
+		end
+	end
+end
+
+function StableCameraProximity:SetMaxDistance(newMaxDistance)
+	assert(type(newMaxDistance) == "number" and newMaxDistance > 0, "MaxDistance must be a positive number")
+	self.MaxDistance = newMaxDistance
+end
+
+StableCameraProximity.new()
+
+return StableCameraProximity
